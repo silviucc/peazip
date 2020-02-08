@@ -3,17 +3,17 @@
 %global debug_package %{nil}
 
 Name:    peazip
-#Version: 6.9.2
 Version: 6.6.1
 Release: 1
 Summary: File and archive manager
 License: LGPLv3
 Group:   Applications/Archiving
 Url:     http://www.peazip.org/peazip-linux.html
-Source0: http://sourceforge.net/projects/%{name}/files/%{version}/%{name}-%{version}.src.zip
+#Source0: http://sourceforge.net/projects/%{name}/files/%{version}/%{name}-%{version}.src.zip
+Source0: https://github.com/giorgiotani/PeaZip/releases/download/%{version}/%{name}-%{version}.src.zip
 # configure to run in users home appdata
-Source1: altconf.txt
-Patch1:  peazip-desktop.patch
+Source1: https://github.com/silviucc/peazip/blob/master/altconf.txt
+Patch1:  https://github.com/silviucc/peazip/blob/master/peazip-desktop.patch
 
 BuildRequires: fpc
 BuildRequires: fpc-src
